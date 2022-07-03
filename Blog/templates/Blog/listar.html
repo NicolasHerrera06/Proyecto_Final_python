@@ -1,0 +1,25 @@
+{% extends 'Blog/padre.html' %}
+
+{% block contenidoQueCambia %}
+
+<table>
+    <tr>
+        <th>Titulo</th>
+        <th>Fecha</th>
+        <th>Autor</th>
+    </tr>
+    {% for p in publicacion%}
+    <tr>
+        <td>{{ p.titulo }}</td>
+        <td>{{ p.fecha }}</td>
+        <td>{{ p.autor }}</td>
+        <td>
+            <a href="{% url 'modificar_post' p.id %}" class="tn btn-info tn-sm">modificar</a>
+            <a href="{% url 'eliminar_post' p.id %}" class="tn btn-danger tn-sm">eliminar</a>
+
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

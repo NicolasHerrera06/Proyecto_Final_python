@@ -1,0 +1,14 @@
+{% extends 'Blog/padre.html' %}
+{% load static %}
+{% block contenidoQueCambia %}
+<h2>Modificar publicación</h2>
+<form action="" method="post">
+
+    {% csrf_token%}
+
+    {{form.as_p}}
+
+    <button type="submit" id="btnEnviar" class="button">Modificar</button>
+  </form>
+
+{% endblock %}

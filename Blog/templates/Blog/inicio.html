@@ -1,0 +1,25 @@
+{% extends 'Blog/padre.html' %}
+{% load static %}
+{% block contenidoQueCambia %}
+
+<h2>Post</hs>
+<div class="posts">
+    {% for p in posteo%}
+    <div class="posteos">
+        <div class="contenedor_posteos">
+            <div class="detalle">
+                <h6>{{p.fecha}}</h6>
+                <h1>{{p.titulo | capfirst}}</h1>
+                <h6>Autor: {{p.autor}}</h6>
+                {% if p.imagen %}
+                <img src="{{ p.imagen.url }}" alt="imagen post">
+                {% endif %}
+                <h4>{{p.texto}}</h4>>
+            </div>
+        </div>
+
+    </div>
+</div>
+    {% endfor%}
+
+{% endblock %}
