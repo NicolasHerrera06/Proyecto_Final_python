@@ -19,7 +19,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{% static 'Blog/css/styles.css' %}" rel="stylesheet" />
     </head>
-    
+ 
     <body>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
@@ -119,7 +119,7 @@
                 </div>
             </div>
         </div>
-
+    
         {% endblock %}
         <!-- Footer-->
         <footer class="border-top">
@@ -161,5 +161,18 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script src="htps://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        {% if messages %}
+            {% for m in messages %}
+                <script>
+                    Swal.fire({
+                    "title":"Felicitaciones",
+                    "text":"{{m}}",
+                    "icon":"successs"
+                    })
+                </script>   
+            {% endfor %}
+        {% endif %}
+
     </body>
 </html>

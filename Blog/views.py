@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login,logout,authenticate
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib import messages
 
 from Blog.forms import UserRegistrationForm
 from .models import Posteo
@@ -114,6 +115,7 @@ def modificar_post(request,id):
         formulario = PostForm(data=request.POST, instance=publicacion)
         if formulario.is_valid():
             formulario.save()
+            messages.success(request, "Modificado correctamente!")
             return redirect(to='listar_post')
         else:
             data["form"] = formulario
@@ -125,4 +127,5 @@ def eliminar_post(request,id):
 
     publicacion = get_object_or_404(Posteo, id=id)
     publicacion.delete()
+    messages.success(request, "Eliminado correctamente!")
     return redirect(to='listar_post')
