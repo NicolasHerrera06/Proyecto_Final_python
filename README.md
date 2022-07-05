@@ -68,5 +68,5 @@ Las herramientas que se utilizaron para crear este  proyecto fueron:
 ## Autores ✒️
 
 * **Nicolas Yunes** - *Trabajo Inicial* - (https://github.com/Skullby/)
-* **Nicolas Keiniger** - *Modificaciones Trabajo* - (https://github.com/Skullby)
+* **Nicolas Keiniger** - *Modificaciones Trabajo* - (https://github.com/nicolaskeiniger)
 * **Nicolás Herrera** - *Documentación* - (https://github.com/NicolasHerrera06)
