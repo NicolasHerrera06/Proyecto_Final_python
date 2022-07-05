@@ -3,7 +3,9 @@
 Este es el proyecto final del curso de Python de la plataforma CoderHouse realizado por los estudiantes Nicolás Herrera, Nicolás Keiniger, Nicolás Yunes el cual consistia en realizar crear una web similar a un blog que contenga un CRUD  el módulo de Login. 
 
 ##Requisitos base
+
 Los requisitos base serán parte de los criterios de evaluación para aprobar el proyecto.
+
 ●	Inicio: Al momento de ingresar a la app en la ruta base ‘/’
 ●	Visualizar el home del blog.
 ●	Poder listar todas las páginas del blog, poder ver en detalle cada una, poder crear, editar o borrar páginas del blog.
